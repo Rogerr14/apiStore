@@ -1,0 +1,58 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '250px' }">
+
+    <mat-toolbar color="primary">
+      <span>Menu</span>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <mat-list-item
+        *ngFor="let item of sideBarItems"
+        [routerLink]="item.url"
+        (click)="sidenav.toggle()"
+      >
+        <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+        <mat-label>{{ item.label }}</mat-label>
+      </mat-list-item>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+
+    <button *ngIf="isAuthorize" mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <button *ngIf="!isAuthorize" mat-icon-button [routerLink]="'/marketplace/'">
+      <mat-icon>store</mat-icon>
+    </button>
+
+    <!-- <mat-label class="mr-3">Bienvenido {{ userName ? userName : '' }}</mat-label> -->
+
+    <span class="spacer"></span>
+
+    <button mat-icon-button (click)="openBottomSheet()">
+      <mat-icon>shopping_cart</mat-icon>
+    </button>
+
+  <!-- *ngIf(userName){ -->
+    
+        <button *ngIf="userName; else buttonLogin" mat-button (click)="onLogout()">
+          Logout
+          <mat-icon>logout</mat-icon>
+        </button>
+        <ng-template #buttonLogin >
+          <mat-label (click) ="onLogout()" >Iniciar Sesion</mat-label>
+        </ng-template>
+
+  <!-- } -->
+  
+
+  </mat-toolbar>
+
+  <div class="container p-2">
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-sidenav-container>

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "zwfVkyia0UU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\VIAMATICA\\Desktop\\ROGER RUIZ\\web\\PruebaViamaticaDotnet-Angular\\Backend\\MarketPlaceAPI\\MarketPlace.Models\\MarketPlace.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\VIAMATICA\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\VIAMATICA\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\VIAMATICA\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512"
+  ],
+  "logs": []
+}

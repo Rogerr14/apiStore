@@ -1,0 +1,53 @@
+<mat-card>
+
+  <ng-template #isLoading>
+    <img mat-card-image  src="assets/tube-spinner.svg">
+  </ng-template>
+ <img *ngIf="producto.urlImagen; else isLoading" mat-card-image  [src]="producto.urlImagen" [alt]="producto.nombre">
+  <mat-divider></mat-divider>
+  <mat-card-content class="mt-2" >
+
+    <mat-card-header>
+      <mat-card-title><a style="cursor: pointer;" (click)="onDetalle(producto.idProducto)">{{ producto.nombre }}</a></mat-card-title>
+
+      <mat-card-subtitle>{{ categoria }}</mat-card-subtitle>
+
+      <span class="spacer"></span>
+
+      <button
+        *ngIf="isAuthorize"
+        mat-icon-button
+        (click)="onSelect(producto.idProducto)"
+        >
+        <mat-icon>more_horiz</mat-icon>
+      </button>
+    </mat-card-header>
+    <!-- <h4>{{ hero.publisher }}</h4> -->
+    <mat-card-header>
+      <p>
+        <strong>{{ producto.precioUnitario | currency }}</strong>
+        <br>
+      </p>
+    </mat-card-header>
+  </mat-card-content>
+
+    <!-- <button
+      *ngIf="isAuthorize"
+      mat-icon-button
+      color="primary"
+      >
+      <mat-icon>edit</mat-icon>
+    </button> -->
+
+
+
+    <span class="spacer"></span>
+
+    <button
+      mat-icon-button
+      (click)="addToCart(producto)"
+      >
+      <mat-icon>shopping_cart_checkout</mat-icon>
+    </button>
+
+</mat-card>

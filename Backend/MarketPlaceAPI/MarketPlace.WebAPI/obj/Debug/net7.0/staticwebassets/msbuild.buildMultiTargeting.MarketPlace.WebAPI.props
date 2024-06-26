@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MarketPlace.WebAPI.props" />
+</Project>

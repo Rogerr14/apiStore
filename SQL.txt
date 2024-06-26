@@ -1,0 +1,73 @@
+CREATE TABLE Usuario(
+	IdUsuario INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Cedula VARCHAR(10),
+	NombreUsuario VARCHAR(20),
+	CorreoElectronico VARCHAR(100),
+	Contraseña VARCHAR(10),
+	Estado INT
+);
+
+SELECT * FROM Usuario;
+
+INSERT INTO Usuario(Cedula, NombreUsuario, CorreoElectronico, Contraseña, Estado) VALUES('0989516510', 'UsuarioAdmin', 'Uadministrador@mail.com', 'Uadmin10', 1);
+
+CREATE TABLE Rol(
+	IdRol INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Nombre VARCHAR(20)
+);
+
+SELECT * FROM Rol;
+
+INSERT INTO Rol(Nombre) VALUES('Administrador');
+INSERT INTO Rol(Nombre) VALUES('Cliente');
+
+CREATE TABLE RolUsuario(
+	RolIdRol INT FOREIGN KEY REFERENCES Rol(IdRol),
+	UsuarioIdUsuario INT FOREIGN KEY REFERENCES Usuario(IdUsuario)
+);
+
+SELECT * FROM RolUsuario;
+
+INSERT INTO RolUsuario(RolIdRol, UsuarioIdUsuario) VALUES(1, 1);
+
+
+CREATE TABLE Categoria(
+	IdCategoria INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Nombre VARCHAR(50),
+	Estado INT
+);
+
+SELECT * FROM Categoria;
+
+CREATE TABLE Producto(
+	IdProducto INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Nombre VARCHAR(20),
+	Stock INT,
+	PrecioUnitario DECIMAL(12,2),
+	CategoriaIdCategoria INT FOREIGN KEY REFERENCES Categoria(IdCategoria),
+	Estado INT,
+	UrlImagen VARCHAR(550),
+	Descripcion VARCHAR(350)
+);
+
+SELECT * FROM Producto;
+
+CREATE TABLE Cabezera(
+	IdCompra INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	UsuarioIdUsuario INT FOREIGN KEY REFERENCES Usuario(IdUsuario),
+	Total DECIMAL(12,2),
+	Fecha DATE,
+	UsuarioCedula VARCHAR(10)
+);
+
+SELECT * FROM Cabezera;
+
+CREATE TABLE Detalle(
+	IdDetalle INT PRIMARY KEY NOT NULL IDENTITY(1,1),
+	Cantidad INT,
+	Total DECIMAL(12,2),
+	ProductoIdProducto INT FOREIGN KEY REFERENCES Producto(IdProducto),
+	CabezeraIdCompra INT FOREIGN KEY REFERENCES Cabezera(IdCompra)
+);
+
+SELECT * FROM Detalle;

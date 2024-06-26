@@ -1,0 +1,22 @@
+<mat-card>
+
+  <ng-template #isLoading>
+    <img mat-card-image  src="assets/tube-spinner.svg">
+  </ng-template>
+  <mat-card-content class="mt-2" >
+
+    <mat-card-header>
+      <mat-card-title><a style="cursor: pointer;" (click)="onSelect(categoria!.idCategoria)">{{ categoria?.nombre }}</a></mat-card-title>
+
+      <span class="spacer"></span>
+
+      <button
+        mat-icon-button
+        (click)="onSelect(categoria!.idCategoria)"
+        >
+        <mat-icon>edit</mat-icon>
+      </button>
+    </mat-card-header>
+  </mat-card-content>
+
+</mat-card>

@@ -1,0 +1,102 @@
+<ng-template #divLoading>
+  <div style="display: flex; justify-content: center;">
+    <div class="col-3">
+      <img src="assets/tube-spinner.svg" alt="">
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #isLoading>
+  <img mat-card-image  src="assets/tube-spinner.svg">
+</ng-template>
+
+
+<div *ngIf="hasLoaded; else divLoading" class="grid">
+
+  <!-- Lado izquierdo -->
+  <div class="col-6 pl-5">
+    <mat-card>
+      <mat-card-content *ngFor="let producto of listProductCart">
+        <mat-card-title>{{ producto.nombre }}</mat-card-title>
+      <mat-card-subtitle>{{ producto.precioUnitario | currency }}</mat-card-subtitle>
+      <br>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Lado derecho -->
+  <!-- Formulario simulacion pasarela de pago -->
+  <div class="col-6 pr-5">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Pagar con tarjeta</mat-card-title>
+
+      </mat-card-header>
+
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <br>
+        <mat-card-subtitle>Datos</mat-card-subtitle>
+        <br>
+
+        <div class="flex flex-column">
+          <mat-label>N° Tarjeta</mat-label>
+
+          <mat-form-field>
+            <mat-label><mat-icon>credit_card</mat-icon></mat-label>
+            <input type="text" matInput placeholder="XXXX XXXX XXXX XXXX">
+          </mat-form-field>
+
+
+          <mat-label>Caducidad:</mat-label>
+          <div class="grid col-12">
+
+            <mat-form-field>
+              <mat-label><mat-icon>calendar_month</mat-icon></mat-label>
+              <input type="text" matInput placeholder="00">
+            </mat-form-field>
+            <span class="spacer"></span>
+            <mat-form-field>
+              <mat-label><mat-icon>calendar_month</mat-icon></mat-label>
+              <input type="text" matInput placeholder="00">
+            </mat-form-field>
+
+            <span class="spacer"></span>
+
+          </div>
+          <mat-label>Cod. seguridad:</mat-label>
+          <br>
+          <mat-form-field>
+            <mat-label><mat-icon>lock</mat-icon></mat-label>
+            <input type="text" matInput placeholder="cvv">
+          </mat-form-field>
+
+        </div>
+        <div class="flex justify-content-between">
+          <!-- <button
+            *ngIf="producto?.idProducto"
+            mat-flat-button
+            color="warn"
+            (click)="onDelete( producto?.idProducto!)"
+          >
+          <mat-icon>delete</mat-icon>
+            Borrar
+          </button> -->
+
+          <span></span>
+          <span class="spacer"></span>
+
+          <button
+            mat-flat-button
+            color="primary"
+            (click)="enviarCompra()"
+          >
+            Aceptar
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<!-- <marketplace-factura></marketplace-factura> -->

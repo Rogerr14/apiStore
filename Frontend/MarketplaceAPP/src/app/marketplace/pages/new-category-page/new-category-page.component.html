@@ -1,0 +1,68 @@
+
+    <mat-card class="mt-2">
+      <mat-card-header>
+        <mat-card-title>{{ currentCategoryForm.nombre }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <!-- Agregar Formulario del producto -->
+        <form class="grid" [formGroup]="categoryForm">
+          <mat-form-field class="col-12">
+            <mat-label>Nombre del producto</mat-label>
+            <!-- Se enlazan con el formControlName a las propiedades en mi componente -->
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="nombre"
+            />
+          </mat-form-field>
+        </form>
+
+        <br>
+        <div class="flex justify-content-between">
+          <button
+            *ngIf="currentCategoryForm.nombre"
+            mat-flat-button
+            color="warn"
+            (click)="onDelete(categoria!.idCategoria)"
+          >
+          <mat-icon>delete</mat-icon>
+            Borrar
+          </button>
+
+          <span></span>
+
+          <button
+            *ngIf="currentCategoryForm.nombre"
+            mat-flat-button
+            color="accent"
+            (click)="onClear()"
+          >
+          <mat-icon>clear_all</mat-icon>
+            Limpiar
+          </button>
+
+          <span></span>
+
+          <button
+            mat-flat-button
+            color="primary"
+            *ngIf="hasLoaded"
+            (click)="onActualizar(categoria!.idCategoria)"
+          >
+            <mat-icon>edit</mat-icon>
+            Editar
+          </button>
+
+          <button
+            mat-flat-button
+            color="primary"
+            *ngIf="!hasLoaded"
+            (click)="onAgregar()"
+          >
+            <mat-icon>edit</mat-icon>
+            Agregar
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>

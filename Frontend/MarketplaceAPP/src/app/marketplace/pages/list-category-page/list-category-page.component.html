@@ -1,0 +1,26 @@
+<!-- <h1>Marketplace .NET - ANGULAR</h1> -->
+
+<mat-divider></mat-divider>
+
+<div class="grid">
+  <div class="col-6 p-2 mt-3">
+
+    <div *ngIf="!hasLoaded; else products" class="text-center">
+    No hay categorías
+    </div>
+
+    <!-- Template -->
+    <ng-template #products>
+      <div class="grid grid-cols-2 gap-2">
+        <div *ngFor="let categoria of categorias"
+          class="col-span-1">
+          <category-card-category [categoria]="categoria" ></category-card-category>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  <div class="col-6 p-2">
+    <category-new-category-page></category-new-category-page>
+  </div>
+
+</div>

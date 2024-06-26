@@ -1,0 +1,75 @@
+<ng-template #divLoading>
+  <div style="display: flex; justify-content: center;">
+    <div class="col-3">
+      <img src="assets/tube-spinner.svg" alt="">
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #isLoading>
+  <img mat-card-image  src="assets/tube-spinner.svg">
+</ng-template>
+
+
+<div *ngIf="hasLoaded; else divLoading" class="grid">
+  <div class="col-6 pl-5">
+    <mat-card>
+      <img *ngIf="producto?.urlImagen; else isLoading" mat-card-image  [src]="producto?.urlImagen" [alt]="producto?.nombre">
+    </mat-card>
+  </div>
+  <div class="col-6 pr-5">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ producto?.nombre }}</mat-card-title>
+
+      </mat-card-header>
+
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <br>
+        <mat-card-subtitle>{{ producto?.descripcion }}</mat-card-subtitle>
+        <br>
+        <!-- Agregar detalles del producto -->
+        <p>Precio:
+          <strong>{{ producto?.precioUnitario | currency }}</strong>
+        </p>
+
+        <mat-divider></mat-divider>
+        <div class="flex justify-content-between">
+          <!-- <button
+            *ngIf="producto?.idProducto"
+            mat-flat-button
+            color="warn"
+            (click)="onDelete( producto?.idProducto!)"
+          >
+          <mat-icon>delete</mat-icon>
+            Borrar
+          </button> -->
+
+          <span></span>
+
+          <button
+            *ngIf="isAuthorize"
+            mat-flat-button
+            color="primary"
+            [routerLink]="['/marketplace/edit-product/', producto?.idProducto]"
+          >
+            <mat-icon>edit</mat-icon>
+            Edit
+          </button>
+          <span class="spacer"></span>
+
+          <button
+            *ngIf="!isAuthorize"
+            mat-flat-button
+            color="primary"
+            (click)="addToCart(producto!)"
+          >
+            <mat-icon>add_shopping_cart</mat-icon>
+            Agregar al carrito
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

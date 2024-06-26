@@ -1,0 +1,34 @@
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\MarketPlaceAPI\MarketPlace.Models\bin\Debug\net7.0\MarketPlace.Models.deps.json
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\MarketPlaceAPI\MarketPlace.Models\bin\Debug\net7.0\MarketPlace.Models.dll
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\MarketPlaceAPI\MarketPlace.Models\bin\Debug\net7.0\MarketPlace.Models.pdb
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.AssemblyInfoInputs.cache
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.AssemblyInfo.cs
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.csproj.CoreCompileInputs.cache
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.dll
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\refint\MarketPlace.Models.dll
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.pdb
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\ref\MarketPlace.Models.dll
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\bin\Debug\net7.0\MarketPlace.Models.deps.json
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\bin\Debug\net7.0\MarketPlace.Models.dll
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\bin\Debug\net7.0\MarketPlace.Models.pdb
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.AssemblyInfoInputs.cache
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.AssemblyInfo.cs
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.csproj.CoreCompileInputs.cache
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.dll
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\refint\MarketPlace.Models.dll
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.pdb
+C:\Users\Jona\Desktop\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\ref\MarketPlace.Models.dll
+C:\Users\VIAMATICA\Desktop\ROGER RUIZ\web\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\bin\Debug\net7.0\MarketPlace.Models.deps.json
+C:\Users\VIAMATICA\Desktop\ROGER RUIZ\web\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\bin\Debug\net7.0\MarketPlace.Models.dll
+C:\Users\VIAMATICA\Desktop\ROGER RUIZ\web\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\bin\Debug\net7.0\MarketPlace.Models.pdb
+C:\Users\VIAMATICA\Desktop\ROGER RUIZ\web\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VIAMATICA\Desktop\ROGER RUIZ\web\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.AssemblyInfoInputs.cache
+C:\Users\VIAMATICA\Desktop\ROGER RUIZ\web\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.AssemblyInfo.cs
+C:\Users\VIAMATICA\Desktop\ROGER RUIZ\web\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.csproj.CoreCompileInputs.cache
+C:\Users\VIAMATICA\Desktop\ROGER RUIZ\web\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.sourcelink.json
+C:\Users\VIAMATICA\Desktop\ROGER RUIZ\web\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.dll
+C:\Users\VIAMATICA\Desktop\ROGER RUIZ\web\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\refint\MarketPlace.Models.dll
+C:\Users\VIAMATICA\Desktop\ROGER RUIZ\web\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\MarketPlace.Models.pdb
+C:\Users\VIAMATICA\Desktop\ROGER RUIZ\web\PruebaViamaticaDotnet-Angular\Backend\MarketPlaceAPI\MarketPlace.Models\obj\Debug\net7.0\ref\MarketPlace.Models.dll

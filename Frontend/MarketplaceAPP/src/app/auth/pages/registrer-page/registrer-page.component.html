@@ -1,0 +1,73 @@
+<div class="flex flex-column">
+  <mat-card>
+    <mat-card-header><h1>Registrer</h1></mat-card-header>
+    <mat-card-content>
+      <!-- Enlazamiento con los campos del formGroup -->
+      <form class="grid" [formGroup]="userRegistrerForm">
+        <mat-form-field class="col-12">
+          <mat-label>Número de cedula</mat-label>
+          <!-- Se enlazan con el formControlName a las propiedades en mi componente -->
+          <input
+            matInput
+            type="text"
+            required
+            formControlName="cedula"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="col-12">
+          <mat-label>Nombre de usuario</mat-label>
+          <!-- Se enlazan con el formControlName a las propiedades en mi componente -->
+          <input
+            matInput
+            type="text"
+            required
+            formControlName="nombreUsuario"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="col-12">
+          <mat-label>Correo electrónico</mat-label>
+          <!-- Se enlazan con el formControlName a las propiedades en mi componente -->
+          <input
+            matInput
+            type="text"
+            required
+            formControlName="correoElectronico"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="col-12">
+          <mat-label>Contraseña</mat-label>
+          <input
+          matInput
+          [type]="hide ? 'password': 'text'"
+          required
+          formControlName="contraseña"
+          >
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-content>
+      <div class="flex justify-content-between">
+
+        <span></span>
+
+        <button
+          mat-flat-button
+          color="primary"
+          (click)="onRegistrer()"
+        >
+          <mat-icon>login</mat-icon>
+          Registrer
+        </button>
+      </div>
+      <div class="flex justify-content-end mt-5">
+        <a href="/auth/">¿Ya tienes cuenta?</a>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

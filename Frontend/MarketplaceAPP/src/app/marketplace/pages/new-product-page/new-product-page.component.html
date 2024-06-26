@@ -1,0 +1,127 @@
+
+
+<ng-template #isLoading>
+  <img mat-card-image  src="assets/default.jpg">
+</ng-template>
+
+
+<div class="grid">
+  <div class="col-6 p-2">
+    <mat-card>
+      <img *ngIf="imagen; else isLoading" mat-card-image  [src]="imagen" [alt]="currentProductForm.nombre">
+    </mat-card>
+  </div>
+  <div class="col-6 p-2">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ currentProductForm.nombre }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <!-- Agregar Formulario del producto -->
+        <form class="grid" [formGroup]="productoForm">
+          <mat-form-field class="col-12">
+            <mat-label>Nombre del producto</mat-label>
+            <!-- Se enlazan con el formControlName a las propiedades en mi componente -->
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="nombre"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Stock</mat-label>
+            <!-- Se enlazan con el formControlName a las propiedades en mi componente -->
+            <input
+              min="0"
+              matInput
+              type="number"
+              required
+              formControlName="stock"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Precio Unitario</mat-label>
+            <!-- Se enlazan con el formControlName a las propiedades en mi componente -->
+            <input
+              min="0"
+              matInput
+              type="number"
+              class="example-right-align"
+              required
+              formControlName="precioUnitario"
+            />
+            <span matTextPrefix>$&nbsp;</span>
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Imagen</mat-label>
+            <!-- Se enlazan con el formControlName a las propiedades en mi componente -->
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="urlImagen"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Descripcion</mat-label>
+            <!-- Se enlazan con el formControlName a las propiedades en mi componente -->
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="descripcion"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Categoria</mat-label>
+            <mat-select formControlName="categoriaIdCategoria" required>
+              <mat-option>--</mat-option>
+              <mat-option *ngFor="let categoria of categorias" [value]="categoria.idCategoria">{{categoria.nombre}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+
+        <br>
+        <div class="flex justify-content-between">
+          <button
+            *ngIf="currentProductForm.nombre"
+            mat-flat-button
+            color="warn"
+            (click)="onDelete(currentProductForm.idProducto)"
+          >
+          <mat-icon>delete</mat-icon>
+            Borrar
+          </button>
+
+          <span></span>
+
+          <button
+            mat-flat-button
+            color="primary"
+            *ngIf="currentProductForm.idProducto"
+            (click)="onActualizar(currentProductForm.idProducto)"
+          >
+            <mat-icon>edit</mat-icon>
+            Editar
+          </button>
+
+          <button
+            mat-flat-button
+            color="primary"
+            *ngIf="!currentProductForm.idProducto"
+            (click)="onAgregar()"
+          >
+            <mat-icon>edit</mat-icon>
+            Agregar
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

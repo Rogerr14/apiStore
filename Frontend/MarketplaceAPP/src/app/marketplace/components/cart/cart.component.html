@@ -1,0 +1,53 @@
+<div class="grid bm-8 pt-3">
+
+    <div *ngFor="let producto of myCart$ | async"
+      class="col-12">
+      <mat-card >
+          <div class="mt-2 row">
+            <div class="flex-container">
+              <div class="flex-item" >
+                <mat-card-title>{{ producto.nombre}}</mat-card-title>
+                <mat-card-subtitle>{{ producto.precioUnitario | currency }}</mat-card-subtitle>
+                <mat-divider></mat-divider>
+                <mat-card-title>Total</mat-card-title>
+                <mat-card-subtitle>${{ +totalProduct(producto.precioUnitario, producto.cantidad) }}</mat-card-subtitle>
+              </div>
+              <span class="spacer "></span>
+              <div class="flex-item" style="display: flex; justify-content: center;">
+                <button mat-mini-fab color="primary" (click)="updateCantidad('minus', producto.idProducto)">
+                  <mat-icon>remove</mat-icon>
+                </button>
+              </div>
+              <div class="flex-item" >
+                <mat-card-title  style="display: flex; justify-content: center;">Cantidad</mat-card-title>
+                <mat-card-subtitle style="display: flex; justify-content: center;" >{{ producto.cantidad }}</mat-card-subtitle>
+              </div>
+              <div class="flex-item" style="display: flex; justify-content: center;">
+                <button mat-mini-fab color="primary" (click)="updateCantidad('add', producto.idProducto)">
+                  <mat-icon>add</mat-icon>
+                </button>
+              </div>
+              <div class="flex-item" style="display: flex; justify-content: center;" >
+                <button mat-icon-button (click)="deleteProduct(producto.idProducto)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+      </mat-card>
+  </div>
+</div>
+
+  <mat-divider></mat-divider>
+  <mat-card-actions>
+
+    <mat-label>
+      <strong>Total: {{ totalCart() | currency }}</strong>
+    </mat-label>
+
+    <span class="spacer"></span>
+    <button mat-raised-button color="primary" (click)="goToCart()">
+      Ir a mi cesta
+    </button>
+  </mat-card-actions>
+
